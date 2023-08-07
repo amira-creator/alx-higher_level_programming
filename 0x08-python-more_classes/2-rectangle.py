@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""1. Real definition of a rectangle"""
+"""2. Area and Perimeter"""
 
 
 class Rectangle:
@@ -52,3 +52,16 @@ class Rectangle:
             raise ValueError("width must be >= 0")
 
         self.__width = value
+
+    def area(self):
+        """Function that computes area of a rectangle"""
+
+        return (self.__width * self.__height)
+
+    def perimeter(self):
+        """Function that computes perimeter of a rectangle"""
+
+        if self.__width == 0 or self.__height == 0:
+            return (0)
+
+        return ((self.__width * 2) + (self.__height * 2))
